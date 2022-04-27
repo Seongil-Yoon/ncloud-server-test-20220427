@@ -42,7 +42,7 @@ public class MemberMybatisController {
 		mv.addObject("name", "페이징 처리된 리스트");
 		mv.addObject("memberlist", list);
 		mv.setViewName("mybatis/memberlist");
-
+//		
 		return mv;
 	}
 
