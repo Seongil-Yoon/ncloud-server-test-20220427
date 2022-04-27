@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- mybatis db 연결정보 세팅 파일 -->
+<configuration>
+	<!-- 1. sql 실행 결과 xxxDTO매핑 -->
+	<typeAliases>
+		<typeAlias type="spring.mybatis.MemberDTO" alias="memberdto" />
+		<typeAlias type="product.ProductDTO" alias="ProductDTO" />
+	</typeAliases>
+	
+
+	<!-- 2. spring-mybatis.xml datasource설정으로 이동 -->
+	<!-- spring-mybatis.xml은 application.properties로 이동 -->
+	<!-- <environments default="developemet">
+		<environment id="developemet">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.cj.jdbc.Driver" />
+				<property name="url"
+					value="jdbc:mysql://127.0.0.1:3306/employeesdb?serverTimezone=UTC" />
+				<property name="username" value="emp" />
+				<property name="password" value="emp" />
+			</dataSource>
+		</environment>
+	</environments> -->
+	
+	<!-- 3. sql 정의 파일명 설정 -->
+	
+</configuration>

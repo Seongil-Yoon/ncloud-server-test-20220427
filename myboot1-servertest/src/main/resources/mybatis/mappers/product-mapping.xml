@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="product.IProductDAO">
+	<select id="productlist" resultType="ProductDTO">
+		select productcode ,productname, price ,company ,balance ,
+			date_format(regdate, '%Y년 %m월 %d일 %h시 %i분') as regdate 
+		from product;
+	</select>
+
+	<select id="product" resultType="ProductDTO" parameterType="int">
+		select productcode ,productname, price ,company ,balance ,
+			date_format(regdate, '%Y년 %m월 %d일 %h시 %i분') as regdate 
+		from product where productcode = #{productcode};
+	</select>
+
+</mapper>
